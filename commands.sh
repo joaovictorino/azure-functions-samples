@@ -3,6 +3,7 @@ func init fuctions-samples --javascript
 
 # create http function
 func new --name create-order --template "HTTP trigger" --authlevel "anonymous"
+func new --name process-order --template "Azure Cosmos DB trigger"
 
 # run local
 func start
