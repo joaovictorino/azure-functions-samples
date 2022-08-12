@@ -6,6 +6,14 @@ module.exports = async function (context, req) {
         ? "Hello, " + name + ". This HTTP triggered function executed successfully."
         : "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.";
 
+
+    if(name){
+        context.bindings.outputDocument = JSON.stringify({
+            id: new Date().toISOString() + Math.random().toString().substring(2,10),
+            name: name
+        });
+    }
+
     context.res = {
         // status: 200, /* Defaults to 200 */
         body: responseMessage
