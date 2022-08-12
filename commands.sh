@@ -4,6 +4,9 @@ func init fuctions-samples --javascript
 # create http function
 func new --name create-order --template "HTTP trigger" --authlevel "anonymous"
 
+# run local
+func start
+
 # Azure
 az login
 
@@ -13,5 +16,5 @@ az storage account create --name sasampleazurefunction --location eastus --resou
 
 az functionapp create --resource-group rg-sample-function --consumption-plan-location eastus --runtime node --runtime-version 16 --functions-version 4 --name create-order-sample --storage-account sasampleazurefunction
 
-# deploy to Azure
+# go to project azure functions root folder and deploy to Azure
 func azure functionapp publish create-order-sample

@@ -15,9 +15,3 @@ resource "azurerm_cosmosdb_account" "orderscosmosdb" {
     zone_redundant = false
   }
 }
-
-resource "azurerm_cosmosdb_sql_database" "ordersdb" {
-  name                = "ordersdb"
-  resource_group_name = azurerm_resource_group.azure-functions-sample.name
-  account_name        = azurerm_cosmosdb_account.orderscosmosdb.name
-}
