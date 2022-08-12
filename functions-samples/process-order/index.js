@@ -1,5 +1,5 @@
-module.exports = async function (context, documents) {
-    if (!!documents && documents.length > 0) {
-        context.log('Document Id: ', documents[0].id);
+module.exports = async function (context, inputDocument) {
+    if (!!inputDocument && inputDocument.length > 0) {
+        context.log('Document Id: ', inputDocument[0].id);
     }
 }

@@ -2,12 +2,12 @@
   "bindings": [
     {
       "type": "cosmosDBTrigger",
-      "name": "documents",
+      "name": "inputDocument",
       "direction": "in",
       "leaseCollectionName": "leases",
-      "connectionStringSetting": "",
-      "databaseName": "",
-      "collectionName": "",
+      "connectionStringSetting": "OrdersDB",
+      "databaseName": "store",
+      "collectionName": "orders",
       "createLeaseCollectionIfNotExists": true
     }
   ]
