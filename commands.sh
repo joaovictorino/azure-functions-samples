@@ -1,9 +1,12 @@
 # create project
 func init fuctions-samples --javascript
 
-# create http function
+# create functions
 func new --name create-order --template "HTTP trigger" --authlevel "anonymous"
+func new --name process-image --template "Azure Blob Storage trigger"
 func new --name process-order --template "Azure Cosmos DB trigger"
+func new --name process-payment --template "Azure Service Bus Queue trigger" 
+func new --name timer-backup --template "Timer Trigger"
 
 # run local
 func start
