@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # create project
 func init fuctions-samples --javascript
 

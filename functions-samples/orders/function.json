@@ -6,7 +6,8 @@
       "direction": "in",
       "name": "req",
       "methods": [
-        "post"
+        "post",
+        "get"
       ]
     },
     {
@@ -17,7 +18,7 @@
     {
       "type": "cosmosDB",
       "direction": "out",
-      "name": "outputDocument",
+      "name": "orders",
       "databaseName": "store",
       "collectionName": "orders",
       "createIfNotExists": true,

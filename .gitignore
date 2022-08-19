@@ -50,3 +50,6 @@ __azurite_db*__.json
 # Terraform
 *.tfstate*
 .terraform
+
+# Drawio
+*.bkp
