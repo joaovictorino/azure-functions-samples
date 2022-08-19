@@ -1,5 +1,6 @@
 module.exports = async function (context, req) {
-    if(req.method == 'post')
+    context.log(req.method);
+    if(req.method == 'POST')
         createOrder(context, req);
     else
         listOrders(context, req);
@@ -36,9 +37,9 @@ function createOrder(context, req) {
 
 };
 
-function listOrders() {
+function listOrders(context, req) {
   context.res = {
       status: 200,
-      body: context.bindings.orders
+      body: context.bindings.ordersList
   };
 }

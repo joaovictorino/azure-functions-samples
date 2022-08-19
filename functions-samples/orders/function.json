@@ -11,6 +11,15 @@
       ]
     },
     {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "ordersList",
+      "databaseName": "store",
+      "collectionName": "orders",
+      "sqlQuery": "SELECT o.status, o.items FROM o",
+      "connectionStringSetting": "OrdersDB"
+    },
+    {
       "type": "http",
       "direction": "out",
       "name": "res"
