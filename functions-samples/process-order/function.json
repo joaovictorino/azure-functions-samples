@@ -9,6 +9,23 @@
       "databaseName": "store",
       "collectionName": "orders",
       "createLeaseCollectionIfNotExists": true
+    },
+    {
+      "name": "ordersProcessed",
+      "type": "serviceBus",
+      "queueName": "ordersmq",
+      "connection": "OrdersQueue",
+      "direction": "out"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "outputDocument",
+      "direction": "out",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "OrdersDB",
+      "databaseName": "store",
+      "collectionName": "orders",
+      "createLeaseCollectionIfNotExists": true
     }
   ]
 }

@@ -1,5 +1,17 @@
 module.exports = async function (context, inputDocument) {
+
     if (!!inputDocument && inputDocument.length > 0) {
-        context.log('Document Id: ', inputDocument[0].id);
+
+        if(inputDocument[0].status != 'confirmed') {
+            context.log('Processing order');
+
+            inputDocument[0].status = 'confirmed';
+            
+            context.bindings.outputDocument = inputDocument[0];
+            
+            context.bindings.ordersProcessed = JSON.stringify(inputDocument[0]);
+
+            context.log('Order confirmed');
+        }
     }
 }

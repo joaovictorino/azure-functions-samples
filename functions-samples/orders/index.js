@@ -13,7 +13,7 @@ function createOrder(context, req) {
   const items = req.body.items;
   
   context.bindings.orders = {
-      status: "created",
+      status: 'created',
       items: []
   }
 
