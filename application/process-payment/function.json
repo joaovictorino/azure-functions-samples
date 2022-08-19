@@ -6,6 +6,20 @@
       "direction": "in",
       "queueName": "myinputqueue",
       "connection": "OrdersQueue"
+    },
+    {
+      "name": "ordersTable",
+      "type": "sql",
+      "direction": "out",
+      "commandText": "dbo.Orders",
+      "connectionStringSetting": "OrderSQLString"
+    },
+    {
+      "name": "orderItemTable",
+      "type": "sql",
+      "direction": "out",
+      "commandText": "dbo.OrdersItem",
+      "connectionStringSetting": "OrderSQLString"
     }
   ]
 }
