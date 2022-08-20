@@ -17,6 +17,7 @@
       "databaseName": "store",
       "collectionName": "orders",
       "sqlQuery": "SELECT o.status, o.items FROM o",
+      "createIfNotExists": true,
       "connectionStringSetting": "OrdersDB"
     },
     {
